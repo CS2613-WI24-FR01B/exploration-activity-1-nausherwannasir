@@ -2,10 +2,10 @@
 ## Package/Library Overview: Pydub
 
 ### What is Pydub?
-Pydub is a Python library designed for audio manipulation tasks. It provides a high-level interface for working with audio files, allowing users to perform various operations such as opening, editing, and exporting audio data. Pydub simplifies complex audio processing tasks by abstracting away the low-level details, making it easy for developers to incorporate audio manipulation functionalities into their Python projects.
+Pydub is a Python library designed for audio manipulation tasks. It provides a high-level interface for working with audio files, allowing users to perform various operations such as opening, editing, and exporting audio data. Pydub simplifies complex audio processing tasks by abstracting away the low-level details, making it easy for developers to incorporate audio manipulation functionalities into their Python projects[1].
 
 ### Purpose of Pydub:
-The primary purpose of Pydub is to streamline the process of working with audio files in Python. It aims to provide a user-friendly interface for performing common audio manipulation tasks, thereby enabling developers to create applications involving audio processing with ease. Pydub serves as a bridge between Python and FFmpeg or Libav, allowing seamless integration of audio processing capabilities into Python scripts.
+The primary purpose of Pydub is to streamline the process of working with audio files in Python. It aims to provide a user-friendly interface for performing common audio manipulation tasks, thereby enabling developers to create applications involving audio processing with ease. Pydub serves as a bridge between Python and FFmpeg or Libav, allowing seamless integration of audio processing capabilities into Python scripts[1].
 
 ### How to Use Pydub:
 Using Pydub is straightforward and involves the following steps:
@@ -43,16 +43,19 @@ Using Pydub is straightforward and involves the following steps:
    play(audio)
    ```
 
-6. **Error Handling**: Pydub provides error handling mechanisms to deal with issues such as missing codecs or unsupported file formats. It logs informative messages to help users diagnose and resolve problems during audio processing.
+6. **Error Handling**: Pydub provides error handling mechanisms to deal with issues such as missing codecs or unsupported file formats. It logs informative messages to help users diagnose and resolve problems during audio processing[2].
 
 ### Additional Functionality:
 In addition to the core functionalities mentioned above, Pydub offers several advanced features and utilities:
 - Audio Effects: Pydub includes built-in effects such as reverb, chorus, and equalization for adding creative enhancements to audio.
 - Metadata Handling: Pydub allows users to read and modify metadata information associated with audio files, such as title, artist, album, and genre.
-- Custom Codecs: Pydub supports custom codec configurations, allowing users to specify encoding parameters for exporting audio in desired formats with specific quality settings.
+- Custom Codecs: Pydub supports custom codec configurations, allowing users to specify encoding parameters for exporting audio in desired formats with specific quality settings[1].
 
 Overall, Pydub is a versatile and powerful library that empowers developers to perform a wide range of audio processing tasks efficiently within the Python ecosystem. Its intuitive API, extensive documentation, and active community support make it a valuable tool for building audio-related applications and projects.
 
-###References:
+### References:
+1. https://github.com/tyiannak/pyAudioAnalysis
+2. https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0144610
+3. https://learnpython.com/blog/plot-waveform-in-python/
 
 
