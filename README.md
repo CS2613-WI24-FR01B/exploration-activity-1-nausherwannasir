@@ -52,7 +52,7 @@ In addition to the core functionalities mentioned above, Pydub offers several ad
 - Custom Codecs: Pydub supports custom codec configurations, allowing users to specify encoding parameters for exporting audio in desired formats with specific quality settings.
 
 Overall, Pydub is a versatile and powerful library that empowers developers to perform a wide range of audio processing tasks efficiently within the Python ecosystem. Its intuitive API, extensive documentation, and active community support make it a valuable tool for building audio-related applications and projects.
-```
 
----
+###References:
+
 
