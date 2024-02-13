@@ -1,29 +1,40 @@
+import tkinter as tk
+from tkinter import filedialog
 from pydub import AudioSegment
 from pydub.playback import play
 
-# First, we're loading two audio files
-audio = AudioSegment.from_file("audio1.wav")
-drum_beat = AudioSegment.from_file("audio2.wav")
+audio = None
 
-# Next, we're making the voice in the audio sound higher-pitched
-# We do this by increasing the frame rate of the audio
-high_pitched_audio = audio.set_frame_rate(int(audio.frame_rate * 1.5))
+def upload_file():
+    global audio 
+    filename = filedialog.askopenfilename(filetypes=[("Audio Files", "*.wav")])
+    audio = AudioSegment.from_file(filename)
 
-# Now, we're making the audio louder
-# We do this by increasing the volume of the audio by 10 dB
-louder_audio = audio + 10
+def modify_audio():
+    global audio  
+    # Modify the audio based on the user's choices
+    if var_high_pitch.get():
+        audio = audio.set_frame_rate(int(audio.frame_rate * 1.5))
+    if var_louder.get():
+        audio = audio + 10
+    if var_loop.get():
+        audio = audio * 3
+    
 
-# Here, we're making the audio repeat 3 times
-looped_audio = audio * 3
+    # Play the modified audio
+    play(audio)
 
-# In this step, we're combining the audio with a drum beat
-# The two sounds will play at the same time
-overlapped_audio = audio.overlay(drum_beat, position=0)
+root = tk.Tk()
 
-# Finally, we're playing each modified audio segment
-# You should hear the high-pitched audio, the louder audio, the looped audio, and the overlapped audio
-play(high_pitched_audio)
-play(louder_audio)
-play(looped_audio)
-play(overlapped_audio)
+var_high_pitch = tk.BooleanVar()
+var_louder = tk.BooleanVar()
+var_loop = tk.BooleanVar()
+
+tk.Button(root, text="Upload Audio File", command=upload_file).pack()
+tk.Checkbutton(root, text="Make audio high-pitched", variable=var_high_pitch).pack()
+tk.Checkbutton(root, text="Make audio louder", variable=var_louder).pack()
+tk.Checkbutton(root, text="Loop audio", variable=var_loop).pack()
+tk.Button(root, text="Modify Audio", command=modify_audio).pack()
+
+root.mainloop()
 
